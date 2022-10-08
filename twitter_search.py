@@ -40,8 +40,8 @@ def make_csv(data, username):
 
 def main():
     headers = create_headers(token)
-    #username = input("Username")
-    username = "@KingJames"
+    username = input("Username")
+    #username = "@KingJames"
     id = get_id(username[1:], headers)
     url = create_id_url(id)
     response = requests.request("GET", url, headers=headers, params='exclude=retweets,replies')
